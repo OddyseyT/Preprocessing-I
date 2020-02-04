@@ -152,6 +152,7 @@ h1 {
 h2 {
   font-size: 2rem;
   font-weight: bold;
+  text-align: center;
 }
 p {
   font-size: 1.8rem;
@@ -182,6 +183,10 @@ nav {
   left: 0;
   /* Position the navbar at the left of the page */
 }
-#contents {
+.contents {
   margin-left: 30%;
+}
+footer {
+  font-size: 1.2rem;
+  text-align: center;
 }
