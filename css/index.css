@@ -230,8 +230,9 @@ html {
   padding-bottom: 1%;
 }
 .container footer {
-  margin-top: 5%;
+  margin-top: 3%;
   text-align: center;
+  justify-items: center;
 }
 .container footer p {
   font-size: 1.2rem;
