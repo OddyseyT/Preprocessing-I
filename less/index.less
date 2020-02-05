@@ -54,6 +54,124 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
 }
 
+html {
+	font-size: 62.5%;
+	
+}
+
+@formatcontent: center;
+@standardfont: 1.8rem;
+
+.flex () {
+	display: flex;
+}
+
+.column (){
+	flex-direction: column;
+}
+
+
+
+.container {
+	.flex;
+	.column;
+	max-width: 950px;
+	
+	
+	.format1 {
+		.flex;
+		.column;
+	}
+
+	h1 {
+		font-size: 3.6rem;
+		padding: 5%;
+	}
+	h2 {
+		font-size: 2.0rem;
+		font-weight: bold;
+		text-align: @formatcontent;
+	}
+	p {
+		font-size: @standardfont;
+	}
+
+	li {
+	font-size: @standardfont;
+	}
+	#introbox {
+		.flex;
+		Flex-direction: row;
+		background: lavender;
+		width: 100%;
+		justify-content: @formatcontent;
+		margin: 5%;
+		@media (max-width:500px){
+			flex-direction:column-reverse;
+		}
+	}
+
+	.subformat {
+		.flex;
+		align-items: @formatcontent;
+		justify-content: @formatcontent;
+		.column;
+		padding: 5%;
+		}
+
+	nav {
+		.flex;
+		flex-direction: column;
+		font-size: @standardfont;
+		overflow: hidden;
+		position: fixed; /* Set the navbar to fixed position */
+		left: 0; /* Position the navbar at the left of the page */
+		@media (max-width:500px){
+		position: static;
+		text-align: @formatcontent;
+		justify-content: @formatcontent;
+		}
+		a {
+	
+			margin-top:3%;
+			margin-bottom:3%;
+			text-decoration: none;
+			color: purple;
+			&:hover {
+		background: purple;
+		color: white;
+			}
+		}
+		}
+
+	#contact {
+		margin-top: 25%;
+		@media (max-width:500px){
+			margin-top: 2%;
+			margin-bottom: 2%;
+		}
+	}
+  	.contents {
+	  margin-left: 30%;
+	  @media (max-width: 500px){
+		  margin:0;
+	  }
+  	}
+
+  	.item {
+		 padding-top: 1%;
+		 padding-bottom: 1%;
+  	}
+
+  	footer {
+		margin-top:3%;
+		text-align: center;
+		justify-items: center;
+ 	 	p {
+		font-size: 1.2rem;
+	  		}
+		}
+	}	
