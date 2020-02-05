@@ -55,12 +55,13 @@ table {
 
 html, body {
 	height: 100%;
-
-     
 }
+
 html {
 	font-size: 62.5%;
+	
 }
+
 @formatcontent: center;
 @standardfont: 1.8rem;
 
@@ -68,87 +69,108 @@ html {
 	display: flex;
 }
 
+.column (){
+	flex-direction: column;
+}
+
+
+
 .container {
 	.flex;
-	flex-direction: column;
+	.column;
 	max-width: 950px;
-}
+	
+	
+	.format1 {
+		.flex;
+		.column;
+	}
 
-.format1 {
-	.flex;
-	flex-direction: column;
-}
+	h1 {
+		font-size: 3.6rem;
+		padding: 5%;
+	}
+	h2 {
+		font-size: 2.0rem;
+		font-weight: bold;
+		text-align: @formatcontent;
+	}
+	p {
+		font-size: @standardfont;
+	}
 
-h1 {
-	font-size: 3.6rem;
-	padding: 5%;
-}
-h2 {
-	font-size: 2.0rem;
-	font-weight: bold;
-	text-align: @formatcontent;
-}
-p {
+	li {
 	font-size: @standardfont;
-}
+	}
+	#introbox {
+		.flex;
+		Flex-direction: row;
+		background: lavender;
+		width: 100%;
+		justify-content: @formatcontent;
+		margin: 5%;
+		@media (max-width:500px){
+			flex-direction:column-reverse;
+		}
+	}
 
-li {
-	font-size: @standardfont;
-}
-#introbox {
-	.flex;
-	Flex-direction: row;
-	background: lavender;
-	width: 100%;
-	justify-content: @formatcontent;
-	margin: 5%;
-}
+	.subformat {
+		.flex;
+		align-items: @formatcontent;
+		justify-content: @formatcontent;
+		.column;
+		padding: 5%;
+		}
 
-.subformat {
-	.flex;
-	align-items: @formatcontent;
-	justify-content: @formatcontent;
-	flex-direction: column;
-	padding: 5%;
-}
+	nav {
+		.flex;
+		flex-direction: column;
+		font-size: @standardfont;
+		overflow: hidden;
+		position: fixed; /* Set the navbar to fixed position */
+		left: 0; /* Position the navbar at the left of the page */
+		@media (max-width:500px){
+		position: static;
+		text-align: @formatcontent;
+		justify-content: @formatcontent;
+		}
+		a {
+	
+			margin-top:3%;
+			margin-bottom:3%;
+			text-decoration: none;
+			color: purple;
+			}
+		a:hover {
+		background: purple;
+		color: white;
+			}
+		}
 
-nav {
-	.flex;
-	flex-direction: column;
-	font-size: @standardfont;
-	overflow: hidden;
-	position: fixed; /* Set the navbar to fixed position */
-	left: 0; /* Position the navbar at the left of the page */
-  }
-nav a {
-	margin-top:3%;
-	margin-bottom:3%;
-	text-decoration: none;
-	color: purple;
-
-}
-nav a:hover {
-	background: purple;
-	color: white;
-}
-
-#contact {
-	margin-top: 25%;
-}
-  .contents {
+	#contact {
+		margin-top: 25%;
+		@media (max-width:500px){
+			margin-top: 2%;
+			margin-bottom: 2%;
+		}
+	}
+  	.contents {
 	  margin-left: 30%;
-  }
+	  @media (max-width: 500px){
+		  margin:0;
+	  }
+  	}
 
-  .item {
-	 padding-top: 1%;
-	 padding-bottom: 1%;
-  }
+  	.item {
+		 padding-top: 1%;
+		 padding-bottom: 1%;
+  	}
 
-  footer {
-	  margin-top: 5%;
-	  text-align: @formatcontent;
-  }
-
-  footer p {
-	font-size: 1.2rem;
-  }
+  	footer {
+	  	margin-top: 5%;
+	  	text-align: @formatcontent;
+ 	 p {
+		font-size: 1.2rem;
+	  }
+	}
+}

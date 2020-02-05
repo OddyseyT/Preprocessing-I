@@ -142,26 +142,26 @@ html {
   flex-direction: column;
   max-width: 950px;
 }
-.format1 {
+.container .format1 {
   display: flex;
   flex-direction: column;
 }
-h1 {
+.container h1 {
   font-size: 3.6rem;
   padding: 5%;
 }
-h2 {
+.container h2 {
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
 }
-p {
+.container p {
   font-size: 1.8rem;
 }
-li {
+.container li {
   font-size: 1.8rem;
 }
-#introbox {
+.container #introbox {
   display: flex;
   Flex-direction: row;
   background: lavender;
@@ -169,14 +169,19 @@ li {
   justify-content: center;
   margin: 5%;
 }
-.subformat {
+@media (max-width: 500px) {
+  .container #introbox {
+    flex-direction: column-reverse;
+  }
+}
+.container .subformat {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   padding: 5%;
 }
-nav {
+.container nav {
   display: flex;
   flex-direction: column;
   font-size: 1.8rem;
@@ -186,30 +191,48 @@ nav {
   left: 0;
   /* Position the navbar at the left of the page */
 }
-nav a {
+@media (max-width: 500px) {
+  .container nav {
+    position: static;
+    text-align: center;
+    justify-content: center;
+  }
+}
+.container nav a {
   margin-top: 3%;
   margin-bottom: 3%;
   text-decoration: none;
   color: purple;
 }
-nav a:hover {
+.container nav a:hover {
   background: purple;
   color: white;
 }
-#contact {
+.container #contact {
   margin-top: 25%;
 }
-.contents {
+@media (max-width: 500px) {
+  .container #contact {
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+}
+.container .contents {
   margin-left: 30%;
 }
-.item {
+@media (max-width: 500px) {
+  .container .contents {
+    margin: 0;
+  }
+}
+.container .item {
   padding-top: 1%;
   padding-bottom: 1%;
 }
-footer {
+.container footer {
   margin-top: 5%;
   text-align: center;
 }
-footer p {
+.container footer p {
   font-size: 1.2rem;
 }
